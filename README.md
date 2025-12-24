@@ -22,6 +22,17 @@ To run tests and see the browser window (Headed mode):
 pytest --headed
 ```
 
+Run only UI Tests::
+```bash
+pytest tests/ui/ --headed
+```
+
+Run only API Tests::
+```bash
+pytest tests/api/
+```
+
+
 ## Project Structure
 ```text
 /pages
