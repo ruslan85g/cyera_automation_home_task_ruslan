@@ -22,6 +22,7 @@ def test_product_display_and_navigation(page, ui_url): # Added ui_url fixture
     # Validate details
     expect(page.locator(".name")).to_contain_text(product_info["name"])
     expect(page.locator(".price-container")).to_contain_text(product_info["price"].split()[0])
+    expect(page.locator("#more-information")).to_be_visible()
 
 def test_add_product_to_cart(page, ui_url): # Added ui_url fixture
     home_page = HomePage(page)
