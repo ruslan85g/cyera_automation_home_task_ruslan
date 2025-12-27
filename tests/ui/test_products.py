@@ -34,4 +34,5 @@ def test_add_product_to_cart(page, ui_url): # Added ui_url fixture
 
     # Optional: verify cart navigation
     page.locator("#cartur").click()
-    expect(page.locator("#tbodyid")).to_be_visible()
+    page.wait_for_url("**/cart.html")
+    expect(page.locator("#tbodyid")).to_be_visible(timeout=10000)
